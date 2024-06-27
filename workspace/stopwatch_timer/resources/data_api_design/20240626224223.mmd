@@ -1,0 +1,27 @@
+
+classDiagram
+    class Stopwatch {
+        -_start_time: float
+        -_elapsed_time: float
+        +start() None
+        +stop() float
+        +reset() None
+        +get_time() float
+    }
+    class History {
+        -_file_path: str
+        +__init__(file_path: str)
+        +add_record(time: float) None
+        +get_records() list
+    }
+    class UI {
+        -_root: Tk
+        -_stopwatch: Stopwatch
+        -_history: History
+        +__init__(stopwatch: Stopwatch, history: History)
+        +run() None
+        +update_time() None
+        +add_to_history() None
+    }
+    Stopwatch --> UI
+    History --> UI
