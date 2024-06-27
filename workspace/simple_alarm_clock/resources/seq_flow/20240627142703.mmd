@@ -1,0 +1,10 @@
+
+sequenceDiagram
+    participant A as AlarmClock
+    participant U as UI
+    U->>A: set_alarm(time)
+    U->>U: update_time_display()
+    Note over U: User interacts with the UI
+    U->>A: start_alarm()
+    A-->>U: alarm_rings()
+    U->>A: stop_alarm()

@@ -1,0 +1,17 @@
+
+classDiagram
+    class AlarmClock {
+        -time: str
+        -is_set: bool
+        +set_alarm(time: str)
+        +start_alarm()
+        +stop_alarm()
+    }
+    class UI {
+        -alarm_clock: AlarmClock
+        +run()
+        +update_time_display()
+        +set_alarm_button_click()
+        +stop_alarm_button_click()
+    }
+    AlarmClock --> UI
