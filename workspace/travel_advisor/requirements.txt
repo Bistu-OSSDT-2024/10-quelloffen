@@ -1,0 +1,6 @@
+requests==2.25.1
+recommendation-engine==0.1.5
+notifications==0.3.2
+traffic-api==1.2.3
+Flask==1.1.2
+weather-api==1.0.0

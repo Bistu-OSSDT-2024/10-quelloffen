@@ -1,0 +1,29 @@
+
+classDiagram
+    class StoreManager {
+        +add_product(product: Product)
+        +remove_product(product_id: int)
+        +checkout(cart: list)
+    }
+    class Product {
+        -id: int
+        -name: str
+        -price: float
+    }
+    class ProductForm {
+        +product: Product
+        +validate_on_submit()
+    }
+    class CheckoutForm {
+        +cart: list
+        +validate_on_submit()
+    }
+    class FlaskApp {
+        -app: Flask
+        +initialize_app()
+        +run()
+    }
+    StoreManager --> Product
+    StoreManager --> ProductForm
+    StoreManager --> CheckoutForm
+    FlaskApp --> StoreManager
